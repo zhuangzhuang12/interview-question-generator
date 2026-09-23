@@ -1,0 +1,4 @@
+jieba
+rank-bm25
+fastembed
+numpy

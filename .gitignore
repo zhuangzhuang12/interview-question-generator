@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 索引 / 数据 / 打包产物（体积大，本地保留，不上传）
+interview_app/data/
+interview_app/dist/
+interview_app/build/
+
+# 语料源（第三方博客，本地下载）
+crazymakercircle_blog/
+
+# LoRA 训练 / 本地模型下载（与出题系统无关的实验）
+train.jsonl
+valid.jsonl
+train_lora.py
+download_model.py
+download.log
+
+# 简历样例 / 题卷样例（含真实姓名，隐私）
+interview_app/resume/sample_xuhaoyang.json
+面试题卷-许昊洋-样例.md
+
+# Swift 构建产物
+interviewdesk/.build/
+interviewdesk/.cache/
+
+# IDE / 本地配置
+.claude/
+.vscode/
