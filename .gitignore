@@ -23,9 +23,9 @@ train_lora.py
 download_model.py
 download.log
 
-# 简历样例 / 题卷样例（含真实姓名，隐私）
-interview_app/resume/sample_xuhaoyang.json
-面试题卷-许昊洋-样例.md
+# 简历样例 / 题卷样例
+interview_app/resume/sample_xxx.json
+面试题卷-样例.md
 
 # Swift 构建产物
 interviewdesk/.build/

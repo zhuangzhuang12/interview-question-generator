@@ -17,7 +17,7 @@ from retrieve.search import retrieve_bundle
 
 def main():
     ap = argparse.ArgumentParser(description="面试出题 RAG：简历 → 检索包")
-    ap.add_argument("--resume", default="resume/sample_xuhaoyang.json", help="简历 JSON 路径")
+    ap.add_argument("--resume", default="resume/sample_xxx.json", help="简历 JSON 路径")
     ap.add_argument("--rebuild", action="store_true", help="强制重新分块 + 建索引")
     args = ap.parse_args()
 

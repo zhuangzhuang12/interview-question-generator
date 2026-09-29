@@ -43,7 +43,7 @@ pip install -r requirements.txt
 python -m corpus.clean && python -m corpus.chunk && python -m corpus.index
 
 # 命令行：简历 → 检索包
-python main.py resume/sample_xuhaoyang.json
+python main.py resume/sample_xxx.json
 
 # 常驻检索服务（供 App 内嵌，stdin/stdout JSON-lines）
 python serve.py

@@ -6,7 +6,7 @@
 
 ## 1. 背景与目标
 
-给一位候选人（如许昊洋）出面试题，传统做法是：人肉读简历 → 凭记忆翻技术文章 → 手写题目和答案 → 手抄进面试 App。换一位候选人就全流程重来，且答案出处靠记忆、容易失真。
+给一位候选人出面试题，传统做法是：人肉读简历 → 凭记忆翻技术文章 → 手写题目和答案 → 手抄进面试 App。换一位候选人就全流程重来，且答案出处靠记忆、容易失真。
 
 本服务把它固化成 **RAG（检索增强生成）流水线**：
 
@@ -87,7 +87,7 @@ interview_app/
 │   └── index.py              # 建索引（BM25 tokens + 向量 + SQLite）
 ├── resume/
 │   ├── parse.py              # 简历 JSON → 技能点 + 子查询
-│   └── sample_xuhaoyang.json # 内置样例简历
+│   └── sample_xxx.json       # 内置样例简历
 ├── retrieve/
 │   └── search.py             # 混合检索 + RRF 融合
 ├── generate/
@@ -207,7 +207,7 @@ FINAL_TOPK = 5    # 每技能点最终片段数
 
 1. **答案锚定片段**：每条 `answerPoints` 以 `【标题】` 前缀组织（背景 → 原理 → 逐条展开）。
 2. **四层出处硬约束**：`source` 字段必须是 `文件名 → 章节（带行号） → 原文摘录 → 链接`。
-3. **⚠️ 语料外**：检索包未覆盖的内容（如 LightRAG 实现细节、Flink 链路）必须标注，标准答案靠候选人自述校准，不得编造。
+3. **⚠️ 语料外**：检索包未覆盖的内容（如 某开源图检索框架实现细节、Flink 链路）必须标注，标准答案靠候选人自述校准，不得编造。
 4. **追问 `followUps`**：每道题 2 个追问，用于区分「背八股」和「真做过」。
 
 ---
@@ -216,10 +216,10 @@ FINAL_TOPK = 5    # 每技能点最终片段数
 
 ```bash
 # 首次（或语料变更）：重建分块 + 索引
-python3 main.py --rebuild --resume resume/sample_xuhaoyang.json
+python3 main.py --rebuild --resume resume/sample_xxx.json
 
 # 日常：复用已有索引，只跑检索
-python3 main.py --resume resume/sample_xuhaoyang.json
+python3 main.py --resume resume/sample_xxx.json
 
 # 生成并注入题卷（Ducc 编好题目后）
 python3 generate/inject.py
@@ -241,7 +241,7 @@ python3 generate/inject.py
 
 ## 8. 已知限制与扩展方向
 
-- **语料覆盖**：698 篇「技术自由圈」语料偏 Java/中间件/大厂面试，前沿点（LightRAG/GraphRAG 实现、Flink/Mafka）未覆盖，题卷里以 ⚠️ 语料外 处理。
+- **语料覆盖**：698 篇「技术自由圈」语料偏 Java/中间件/大厂面试，前沿点（某开源图检索框架/GraphRAG 实现、Flink/Mafka）未覆盖，题卷里以 ⚠️ 语料外 处理。
 - **召回 top-5 局限**：某些经典题（如 Redis 六大架构）top-5 只覆盖部分子节，需更细查询或提高 top-k。
 - **简历输入**：当前仅结构化 JSON；PDF 简历解析（pymupdf）可作为增强。
 - **生成自动化**：当前题卷题目与答案由 Ducc 手写，可进一步让 `build_prompt.py` 输出结构化的 LLM prompt，接入模型做初稿再人工校验。

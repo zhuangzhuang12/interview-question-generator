@@ -239,7 +239,7 @@ struct ContentView: View {
                     .buttonStyle(.plain)
                     .help("添加面试问题")
                 }
-                Text("许昊洋 · 2027 校招 · 后端开发工程师（SWE 平台组）")
+                Text("候选人 · 校招 · 后端开发工程师（SWE 平台组）")
                     .font(.system(size: 12, weight: .medium))
                     .foregroundStyle(.secondary)
             }
@@ -905,7 +905,7 @@ extension Color {
 }
 
 enum InterviewData {
-    static let categories = ["经历与动机", "美团实习", "Agent 与 RAG", "后端基础", "科研与编程", "综合判断"]
+    static let categories = ["经历与动机", "大厂实习", "Agent 与 RAG", "后端基础", "科研与编程", "综合判断"]
 
     static func blankQuestion() -> InterviewQuestion {
         InterviewQuestion(id: UUID().uuidString, category: "后端基础", title: "新面试问题", prompt: "",
@@ -919,19 +919,19 @@ enum InterviewData {
     }
 
     static let questions: [InterviewQuestion] = [
-        InterviewQuestion(id: "intro-xhy", category: "经历与动机", title: "1 · 经历主线与平台后端动机", prompt: "请用 1 分钟介绍自己，并说明为什么申请 SWE 平台组后端开发。", answerPoints: [
-            "主线应覆盖北邮本硕、美团用户技术部后端实习、Agent/RAG 项目与 GuideRAG 研究。",
+        InterviewQuestion(id: "intro-mainline", category: "经历与动机", title: "1 · 经历主线与平台后端动机", prompt: "请用 1 分钟介绍自己，并说明为什么申请 SWE 平台组后端开发。", answerPoints: [
+            "主线应覆盖本硕学历、大厂后端实习、Agent/RAG 项目与 图检索论文研究。",
             "能把 AI 能力落到稳定、可观测、可评测的平台工程，而不只停留在模型调用。",
             "明确个人主导、独立实现和团队协作边界，并能给出代码或指标证据。"
         ], followUps: ["简历中哪一项最能代表你的后端能力？", "为什么不是纯算法岗？", "入职后三个月最想补齐什么？"]),
 
-        InterviewQuestion(id: "push-realtime", category: "美团实习", title: "2 · Push 实时链路扩容限流", prompt: "请画出实时 Push 链路，并解释“独立扩容限流器 + 重点人群兜底”的设计、容量依据和故障边界。", answerPoints: [
+        InterviewQuestion(id: "push-realtime", category: "大厂实习", title: "2 · Push 实时链路扩容限流", prompt: "请画出实时 Push 链路，并解释“独立扩容限流器 + 重点人群兜底”的设计、容量依据和故障边界。", answerPoints: [
             "说明入口、消费、召排、限流、投放及监控位置，区分业务限额与系统保护限流。",
             "限流算法、Key 粒度、配置下发、并发安全、热 Key 与降级策略应自洽。",
-            "能解释曝光 PV +7.47%、交易订单 +12.75% 的实验口径、对照组、周期和因果归因。"
+            "能解释曝光 PV、交易订单 的实验口径、对照组、周期和因果归因。"
         ], followUps: ["限流器实例扩缩容时额度如何保持准确？", "Redis 或配置中心故障怎么办？", "提升为什么能归因于你的方案？"]),
 
-        InterviewQuestion(id: "push-offline", category: "美团实习", title: "3 · 离线失败恢复与幂等", prompt: "离线 Push 失败后，Flink、Mafka、Redis 时段缓存和分布式锁如何协作恢复？请按消息状态机说明。", answerPoints: [
+        InterviewQuestion(id: "push-offline", category: "大厂实习", title: "3 · 离线失败恢复与幂等", prompt: "离线 Push 失败后，Flink、Mafka、Redis 时段缓存和分布式锁如何协作恢复？请按消息状态机说明。", answerPoints: [
             "失败事件应包含幂等键、单元、时段、失败原因和版本；Flink 消费后判断是否可恢复。",
             "恢复 Redis 缓存需处理重复、乱序、迟到和消息重放；原子性不能只依赖一个模糊的分布式锁描述。",
             "说明锁粒度、TTL、持锁失败、业务执行超时、解锁校验，以及最终补偿和告警。"
@@ -949,7 +949,7 @@ enum InterviewData {
             "数据集应防泄漏、分难度并保留回归集；区分离线自动指标、LLM 裁判和人工验收。"
         ], followUps: ["工具返回部分成功时如何生成答案？", "如何避免评测被 Prompt 记住？", "一个失败 Case 如何定位到具体节点？"]),
 
-        InterviewQuestion(id: "fitness-agent", category: "Agent 与 RAG", title: "6 · LangGraph 饮食健身 Agent", prompt: "Planner-Actor-Reflector-Adjuster 为什么需要四阶段？AgentState、短长期记忆和混合检索如何设计？", answerPoints: [
+        InterviewQuestion(id: "personal-agent", category: "Agent 与 RAG", title: "6 · LangGraph 个人 Agent 项目", prompt: "Planner-Actor-Reflector-Adjuster 为什么需要四阶段？AgentState、短长期记忆和混合检索如何设计？", answerPoints: [
             "能给出状态字段、节点转移、循环终止、失败恢复和持久化，而非只复述框架名。",
             "Redis 与 Qdrant 的职责边界、记忆写入/召回策略、用户隔离和过期删除应明确。",
             "向量 + BM25 融合需说明召回、归一化/重排、TopK、引用与健康建议安全边界。"
@@ -973,10 +973,10 @@ enum InterviewData {
             "锁不是幂等替代品；最终仍需业务状态、版本号或唯一约束兜底。"
         ], followUps: ["Redlock 能完全解决吗？", "如何防止误删别人的锁？", "不用锁能否实现？"]),
 
-        InterviewQuestion(id: "guiderag", category: "科研与编程", title: "10 · GuideRAG 论文深挖", prompt: "请从问题定义、核心方法、实验与失败案例介绍 GuideRAG，并解释它如何缓解多跳检索漂移。", answerPoints: [
+        InterviewQuestion(id: "rag-paper", category: "科研与编程", title: "10 · 图检索论文深挖", prompt: "请从问题定义、核心方法、实验与失败案例介绍 图检索论文，并解释它如何缓解多跳检索漂移。", answerPoints: [
             "规划引导任务分解、意图锚点、类型约束扩展和图融合之间应有清晰数据流与创新点。",
-            "能说明数据集、强基线、消融、统计显著性、成本/时延，以及与 GraphRAG/LightRAG 的差异。",
-            "第一作者应能回答关键实现、负例和局限，而不只讲摘要。"
+            "能说明数据集、强基线、消融、统计显著性、成本/时延，以及与 GraphRAG/某开源图检索框架的差异。",
+            "应能回答关键实现、负例和局限，而不只讲摘要。"
         ], followUps: ["最关键的消融结果是什么？", "哪类问题反而退化？", "如果去掉类型约束会发生什么？"]),
 
         InterviewQuestion(id: "coding", category: "科研与编程", title: "11 · 编程题：并发安全限流器", prompt: "用 Java 实现一个线程安全的令牌桶限流器：支持每秒补充 rate 个令牌、容量 capacity、tryAcquire(n)，并说明测试方法。", answerPoints: [
@@ -985,7 +985,7 @@ enum InterviewData {
             "测试包含确定性时钟、容量上限、突发、稳定速率和多线程不超发；分析时间/空间复杂度。"
         ], followUps: ["分布式场景如何扩展？", "实例扩容如何避免总额度翻倍？", "滑动窗口与令牌桶的取舍？"]),
 
-        InterviewQuestion(id: "verdict", category: "综合判断", title: "12 · 真实性与成长性判断", prompt: "从 Push 优化、Agent 平台、GuideRAG 中任选一项，给出你亲自做过的最难决策：备选方案、取舍、验证、上线和复盘。", answerPoints: [
+        InterviewQuestion(id: "verdict", category: "综合判断", title: "12 · 真实性与成长性判断", prompt: "从 Push 优化、Agent 平台、图检索论文中任选一项，给出你亲自做过的最难决策：备选方案、取舍、验证、上线和复盘。", answerPoints: [
             "优秀回答有具体约束、代码/数据证据和个人决策链，能区分团队成果与个人贡献。",
             "能主动指出方案局限、失败尝试、线上风险及下一步，而不是只报正向指标。",
             "综合观察学习速度、结构化沟通、工程严谨性与对业务指标的敏感度。"
