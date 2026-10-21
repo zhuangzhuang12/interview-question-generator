@@ -1,5 +1,7 @@
 # 智能面试出题系统（InterviewDesk）
 
+![InterviewDesk 面试题智能准备工作流](interview_app/assets/app-promo.svg)
+
 RAG 驱动的面试出题工具：把候选人简历自动变成一份**带考察点、带四层出处、可校对的面试题卷**。
 
 > 简历 → 检索语料 → LLM 生成题卷初稿 → App 内校对 → 落库
