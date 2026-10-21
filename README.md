@@ -14,6 +14,7 @@ RAG 驱动的面试出题工具：把候选人简历自动变成一份**带考�
 | `interviewdesk/` | macOS 桌面 App（内嵌检索进程 + 生成编排） | SwiftUI、SPM、macOS 14+ |
 | `面试出题系统-设计方案.md` | 整体设计文档 | — |
 | `interview_app/docs/architecture.md` | 检索服务架构介绍 | — |
+| `docs/系统业务流程与代码详解.md` | 从业务流程到关键 Swift / Python 代码的逐段讲解 | — |
 
 ## 架构
 
