@@ -1,6 +1,6 @@
-<div align="center">
-  ![InterviewDesk 面试题智能准备工作流](./assets/app-promo.svg)
+![InterviewDesk 面试题智能准备工作流](assets/app-promo.svg)
 
+<div align="center">
   <h1>InterviewDesk · 面试题 RAG 服务</h1>
   <p>从候选人简历出发，检索有出处的技术知识，生成可复核的结构化面试题。</p>
 
