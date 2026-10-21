@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="30" x2="1120" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#0B1020"/><stop offset="1" stop-color="#182844"/></linearGradient>
+    <linearGradient id="glow" x1="780" y1="105" x2="1080" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#7C6CFF"/><stop offset="1" stop-color="#35D6C2"/></linearGradient>
+    <filter id="shadow" x="630" y="83" width="515" height="455" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="30"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="900" cy="304" r="190" fill="url(#glow)" opacity=".22" filter="url(#shadow)"/>
+  <circle cx="1060" cy="84" r="210" fill="#7465FF" opacity=".12"/>
+  <circle cx="703" cy="595" r="180" fill="#29D8C6" opacity=".08"/>
+  <path d="M72 91h34" stroke="#5AE0CA" stroke-width="5" stroke-linecap="round"/>
+  <text x="120" y="99" fill="#A9BAD2" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="19" font-weight="600" letter-spacing="3">INTERVIEWDESK · AI INTERVIEW WORKFLOW</text>
+  <text x="72" y="196" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="52" font-weight="750">让每一道面试题</text>
+  <text x="72" y="263" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="52" font-weight="750">都有迹可循</text>
+  <text x="74" y="319" fill="#AFC0D8" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="21">从候选人简历出发，找到知识依据，再由面试官打磨题卷。</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="16" font-weight="600">
+    <rect x="72" y="367" width="131" height="39" rx="19.5" fill="#202E48" stroke="#344563"/><text x="98" y="392" fill="#DCE8F7">简历技能拆解</text>
+    <rect x="215" y="367" width="143" height="39" rx="19.5" fill="#202E48" stroke="#344563"/><text x="241" y="392" fill="#DCE8F7">BM25 + 向量</text>
+    <rect x="370" y="367" width="131" height="39" rx="19.5" fill="#202E48" stroke="#344563"/><text x="396" y="392" fill="#DCE8F7">答案出处可查</text>
+  </g>
+  <text x="73" y="526" fill="#71839E" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="15">本地知识检索 · 人工审核出题 · macOS 桌面端工作流</text>
+  <g transform="translate(665 131)">
+    <rect x="0" y="0" width="443" height="368" rx="20" fill="#111B2E" stroke="#536784" stroke-opacity=".65" stroke-width="1.5"/>
+    <rect x="0" y="0" width="443" height="48" rx="20" fill="#1D2A40"/>
+    <path d="M0 29a20 20 0 0 0 20 19h403a20 20 0 0 0 20-19" fill="#1D2A40"/>
+    <circle cx="24" cy="24" r="5" fill="#FA6B6B"/><circle cx="43" cy="24" r="5" fill="#F5C45D"/><circle cx="62" cy="24" r="5" fill="#4ED0A1"/>
+    <text x="91" y="29" fill="#B5C4D8" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="14" font-weight="600">候选人技能检索</text>
+    <rect x="23" y="71" width="116" height="27" rx="13.5" fill="#253757"/><text x="41" y="89" fill="#AFC7F1" font-family="sans-serif" font-size="12">技能 · Redis</text>
+    <text x="23" y="130" fill="#E8F0FA" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="17" font-weight="700">缓存与高可用</text>
+    <rect x="23" y="146" width="395" height="1" fill="#2B3B54"/>
+    <rect x="23" y="164" width="4" height="72" rx="2" fill="#6E79FF"/>
+    <text x="40" y="180" fill="#9EADBF" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="12">检索片段 01 · Redis 缓存设计</text>
+    <text x="40" y="203" fill="#DCE6F3" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13">缓存一致性策略与业务场景的取舍……</text>
+    <text x="40" y="224" fill="#6EDCC5" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="11">文章 / 章节 / 原文 / 链接　 ↗</text>
+    <rect x="23" y="251" width="4" height="72" rx="2" fill="#36CBB7"/>
+    <text x="40" y="267" fill="#9EADBF" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="12">检索片段 02 · Redis 高可用</text>
+    <text x="40" y="290" fill="#DCE6F3" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="13">主从复制、故障切换与一致性边界……</text>
+    <text x="40" y="311" fill="#6EDCC5" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="11">文章 / 章节 / 原文 / 链接　 ↗</text>
+    <rect x="23" y="337" width="397" height="1" fill="#2B3B54"/>
+    <text x="23" y="356" fill="#8193AC" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif" font-size="11">混合检索已完成　·　候选片段 5 条</text>
+  </g>
+</svg>
